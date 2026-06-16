@@ -83,19 +83,37 @@ function filterproducts(){
          }
      renderproduct(filteredproduct)
 }
-const gridBtn = document.getElementById("gridView");
+
 const listBtn = document.getElementById("listView");
-gridBtn.addEventListener("click", () => {
 
-    productrender.classList.remove("list-view");
-
-});
 listBtn.addEventListener("click", () => {
 
-    productrender.classList.add("list-view");
+    productrender.classList.toggle("list-view");
+    if(productrender.classList.contains("list-view")){
+        localStorage.setItem("view", "list-view");
+        listBtn.textContent="📋 List View";
+    }
+    else{
+        localStorage.setItem("view", "grid-view");
+        listBtn.textContent="🔲 Grid View"
+    }
 
 });
+const toggleBtn = document.getElementById("themeToggle");
 
+toggleBtn.addEventListener("click", () => {
+   
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+     localStorage.setItem("theme", "dark");
+
+    toggleBtn.textContent = "☀️ Light Mode";
+  } else {
+    localStorage.setItem("theme", "light");
+    toggleBtn.textContent = "🌙 Dark Mode";
+  }
+});
 searchproducts.addEventListener("input",filterproducts)
 categoryproducts.addEventListener("change",filterproducts)
 priceproducts.addEventListener("input",filterproducts)

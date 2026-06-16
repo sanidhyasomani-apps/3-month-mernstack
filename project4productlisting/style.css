@@ -9,6 +9,11 @@ body{
     background:#f4f6f9;
     padding:30px;
 }
+body.dark {
+  background-color: #0e0d0d;
+
+
+}
 
 h1{
     text-align:center;
@@ -17,7 +22,33 @@ h1{
 }
 
 /* Filters */
+body.dark {
+    background: #0e0d0d;
+    color: #e5e7eb;
+}
 
+body.dark h1 {
+    color: #ffffff;
+}
+
+body.dark .card {
+    background: #1f2937;
+}
+
+body.dark .card h3 {
+    color: #ffffff;
+}
+
+body.dark .card p {
+    color: #d1d5db;
+}
+
+body.dark .filters input,
+body.dark .filters select {
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
 .filters{
     display:flex;
     gap:15px;
