@@ -26,7 +26,7 @@ function App() {
       setCheck(prev => prev - 1);
     }
   }
-
+  console.log(array)
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center p-4">
       <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-8">
@@ -89,7 +89,7 @@ function App() {
             </li>
           ))}
         </ul>
-
+    
       </div>
     </div>
   );
